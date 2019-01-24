@@ -26,7 +26,7 @@ Figure 1 and 2 show the surface and contour plots of the Branin function using t
 
 ## Inputs
 
-For computer experiments, the input variables $x_1, x_2$ are modeled as two independent uniform random variables.
+For computer experiment purposes, the input variables $x_1, x_2$ are modeled as two independent uniform random variables.
 
 | No | Variable | Distribution | Parameters |
 | - | - | - | - | - |

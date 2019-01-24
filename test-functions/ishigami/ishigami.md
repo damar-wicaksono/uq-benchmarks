@@ -18,13 +18,13 @@ where $\mathbf{x} = \{x_1, x_2,x_3\} \in [-\pi, \pi]^3$ are input variables; whi
 
 The Ishigami function is highly nonlinear and non-monotonous, particularly influenced by $x_3$.
 
-![ishigamiHistogram|200x200](/home/wdamar/projects/uq-benchmarks/test-functions/ishigami/ishigamiHistogram.png)
+![ishigamiHistogram|200x200](./ishigamiHistogram.png)
 **Figure 1**: The histogram of the Ishigami function based on $10^6$ sample points.
 
 
 ## Inputs
 
-For computer experiments, the inputs $x_1, x_2,x_3$ are modeled as three independent uniform random variables.
+For computer experiment purposes, the inputs $x_1, x_2,x_3$ are modeled as three independent uniform random variables.
 
 | No   | Variable | Distribution | Parameters                        |
 | ---- | -------- | ------------ | --------------------------------- |
