@@ -14,7 +14,7 @@ $$
 f(\mathbf{x}) = a (x_2 - b x_1^2 + c x_1 - r)^2 + s (1-t) \cos{x_1} + s; \;\; x_1 \in [-5, 10], \;\; x_2 \in [0, 15],
 $$
 
-where $\mathbf{x} = \{x_1, x_2\}$ are input variables; and $a, b, c, r, s, t$ are constants.
+where $\mathbf{x} = \{x_1, x_2\}​$ are input variables; and $a, b, c, r, s, t​$ are constants.
 
 Figure 1 and 2 show the surface and contour plots of the Branin function using the default values of the constants, respectively.
 
@@ -48,11 +48,11 @@ The default values for the constants are shown below.
 
 ## Analytical values
 
-Using the constants above, three (identical) global minima of the function, $f(\mathbf{x}_{\min,i}) = 0.397887$, are located at:
+Using the constants above, three (identical) global minima of the function, $f(\mathbf{x}^*_{i}) = 0.397887$, are located at:
 
-* $\mathbf{x}_{\min,1} = (-\pi, 12.275)$
-* $\mathbf{x}_{\min,2} = (\pi, 2.275)$
-* $\mathbf{x}_{\min,3} = (9.42478, 2.475)$
+* $\mathbf{x}^*_{1} = (-\pi, 12.275)$
+* $\mathbf{x}^*_{2} = (\pi, 2.275)$
+* $\mathbf{x}^*_{3} = (9.42478, 2.475)​$
 
 ## Resources
 
