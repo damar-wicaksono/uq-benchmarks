@@ -32,4 +32,4 @@ Figure 1 shows the scatter plot of $5\times 10^6$ sample points, with each point
 
 ## References
 
-* B. Echard, N. Gayton, M. Lemaire, and N. Relun, "A combined Importance Sampling and Kriging reliability method for small failure probabilities with time-demanding numerical models", _Reliability Engineering and System Safety_, vol. 111, pp. 232-240, 2013. [DOI:10.1016/j.ress.2012.10.008](https://doi.org/10.1016/j.ress.2012.10.008).
+* B. Echard, N. Gayton, M. Lemaire, and N. Relun, "A combined Importance Sampling and Kriging reliability method for small failure probabilities with time-demanding numerical models", _Reliability Engineering and System Safety_, vol. 111, pp. 232-240, 2013. [DOI:10.1016/j.ress.2012.10.008](https://doi.org/10.1016/j.ress.2012.10.008)
