@@ -4,7 +4,7 @@
 [//]: # "Application fields: sensitivity, uncertainty-quantification"
 [//]: # "Dimension: 3-dimension"
 
-The Ishigami function is commonly used as a test function to benchmark global sensitivity analysis methods.
+The Ishigami function is commonly used as a test function to benchmark global sensitivity analysis methods (Ishigami and Homma, 1990; Sobol' and Levitan, 1999; Marrel et al., 2009).
 
 ## Description
 
@@ -34,19 +34,43 @@ For computer experiment purposes, the inputs $x_1, x_2,x_3$ are modeled as three
 
 ## Constants
 
-The recommended values of the constants according to Marrel et al. (2009) are shown below.
+The constants of the Ishigami functions differs according to the literature shown in the table below.
 
-| No | Constant | Value |
-| - | - | - |
-| 1 | a | 7 |
-| 2 | b | 0.1 |
+| No | Constants | Value |
+| :-: | :-: | :-: |
+| 1 | $a = 0.7$<br />$b = 0.1$ | Marrel et al. (2009) |
+| 2 | $a = 0.7$<br />$b = 0.05$ | Sobol' and Levitan (1999) |
 
-Other values are recommended according to Sobol' and Levitan (1999).
+## Reference values
 
-| No | Constant | Value |
-| - | - | - |
-| 1 | a | 7 |
-| 2 | b | 0.05 |
+### First-order Sobol' indices
+
+The analytical solution for the first-order Sobol' indices of the Ishigami function as described above is:
+
+* $S_1 = \frac{V_1}{\mathbb{V}[Y]}$
+* $S_2 = \frac{V_2}{\mathbb{V}[Y]}$
+* $S_3 = \frac{V_3}{\mathbb{V}[Y]}$
+
+where:
+
+* $\mathbb{V}[Y] = \frac{a^2}{8} + \frac{b\pi^4}{5} + \frac{b^2\pi^8}{18} + \frac{1}{2}$
+* $V_1 = 0.5 (1 + \frac{b\pi^4}{5})^2$
+* $V_2 = \frac{a^2}{8}$
+* $V_3 = 0$
+
+### Total-effect Sobol' indices
+
+The analytical solution for the total-effect Sobol' indices of the Ishigami function as described above is:
+
+* $S_{T1} = \frac{V_{T1}}{\mathbb{V}[Y]}$
+* $S_{T2} = \frac{V_{T2}}{\mathbb{V}[Y]}$
+* $S_{T3} = \frac{V_{T3}}{\mathbb{V}[Y]}$
+
+where:
+
+* $V_{T1} = 0.5 (1 + \frac{b\pi^4}{5})^2 + \frac{8b^2\pi^8}{225}$
+* $V_{T2}= \frac{a^2}{8}$
+* $V_{T3} = \frac{8b^2\pi^8}{225}$
 
 ## Resources
 
