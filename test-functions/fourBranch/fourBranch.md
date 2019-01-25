@@ -23,8 +23,13 @@ $$
 
 where the input variables $\mathbf{x} = \{x_1, x_2\}$ are modeled as two independent Gaussian random variables.
 
-The failure event is defined as $f(\mathbf{x}) \leq 0$ and the failure probability $P_f = \mathbb{P}[f(\mathbf{x}) \leq 0]$.
+The failure event is defined as $f(\mathbf{x}) \leq 0$ and the failure probability $P_f = \mathbb{P}[f(\mathbf{x}) \leq 0]$. Figure 1 and 2 show the surface and contour plot of the four-branch function, respectively. In Figure 2, the limit state function ($f(\mathbf{x}) = 0$) is shown.
 
+![fourBranchSurface](/home/wdamar/projects/uq-benchmarks/test-functions/fourBranch/fourBranchSurface.png)
+**Figure 1**: Surface plot of the four-branch function.
+
+![fourBranchContour](/home/wdamar/projects/uq-benchmarks/test-functions/fourBranch/fourBranchContour.png)
+**Figure 2**: Contour plot of the four-branch function. The limit state function is also shown.
 
 ## Inputs
 
