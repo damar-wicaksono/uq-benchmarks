@@ -41,7 +41,7 @@ width = 256;
 height = 256;
 set(gcf,'position',[x0, y0, width, height])
 
-contour(X, Y, newZ, -5:3, 'Color', 'k')
+contour(X, Y, newZ, -5:3)
 hold on
 contour(X, Y, newZ, [0,0], 'Color', 'k', 'LineWidth', 3, 'ShowText', 'on')
 hold off
