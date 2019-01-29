@@ -1,5 +1,5 @@
 %% Specify the high-dimensional example function (M = 2)
-highDimensional = @(X,Y,C) (2 - 3 * C * sqrt(2)) - X - Y;
+highDimensional = @(X,Y,C) (2 + 3 * C * sqrt(2)) - X - Y;
 
 % Input mesh
 [X, Y] = meshgrid(-10:1:10, -10:1:10);
@@ -34,7 +34,7 @@ hold on
 xlabel('x_1')
 ylabel('x_2')
 contour(X, Y, Z, [0,0], 'Color', 'k', 'ShowText', 'on')
-contour(X, Y, Z, [-15, -10, 10, 15], 'ShowText', 'on')
+contour(X, Y, Z, [-15, -10, -5, 5, 10, 15], 'ShowText', 'on')
 hold off
 
 saveas(gcf, 'highDimensionalContour.png')
