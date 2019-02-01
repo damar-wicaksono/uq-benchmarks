@@ -30,18 +30,22 @@ for i=1:size(N,2)
         InputOpts.Marginals(k).Moments = [1, 0.2];
     end
     
-    myInput = uq_createInput(InputOpts);
+    myInput = uq_createInput(InputOpts, '-private');
     
     rng(100,'twister')
+    MCOptions.Input = myInput;
     MCOptions.Type = 'Reliability';
     MCOptions.Method = 'MCS';
     
     % Specify the maximum sample size
     MCOptions.Simulation.MaxSampleSize = 1e6;
+    MCOptions.Simulation.BatchSize = 1e6;
     
     %  Run the Monte Carlo analysis
-    MCAnalysis = uq_createAnalysis(MCOptions);
+    MCAnalysis = uq_createAnalysis(MCOptions, '-private');
 
+    %uq_removeAnalysis(1)
+    %uq_removeInput(1)
     Pf_est(i) = MCAnalysis.Results.Pf;
     CoV_est(i) = MCAnalysis.Results.CoV;
     
