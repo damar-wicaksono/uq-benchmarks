@@ -4,11 +4,12 @@
 [//]: # "Application fields: metamodeling, sensitivity"
 [//]: # "Dimension: 6-dimension"
 
-The output transformerless (OTL) circuit function is a six-dimensional test function. It has been used in metamodeling (Ben Ari, 2007) and sensitivity analysis for screening (Moon, 2010) exercises.
+The six-dimensional OTL circuit function computes the mid-point voltage ($V_m$) of an output transformerless (OTL) push-pull circuit.
+It has been used as a test function in metamodeling (Ben Ari, 2007) and sensitivity analysis for screening (Moon, 2010) exercises.
 
 ## Description
 
-The OTL circuit function computes the mid-point voltage ($V_m$) of an output transformerless (OTL) push-pull circuit using the following expression:
+The mid-point voltage $(V_m)$ of an OTL push-pull circuit is computed using the following analytical expression:
 
 $$
 V_m = f(\mathbf{x}) = \frac{(V_{b1} + 0.74) \beta (R_{c2} + 9)}{\beta (R_{c2} + 9) + R_f} + \frac{11.35 R_f}{\beta (R_{c2} + 9) + R_f} + \frac{0.74 R_f \beta (R_{c2} + 9)}{(\beta (R_{c2} + 9) + R_f) R_{c1}},
