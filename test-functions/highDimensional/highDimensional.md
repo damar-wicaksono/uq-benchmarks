@@ -32,9 +32,9 @@ $M$ independent identically distributed lognormal random variables are considere
 
 | No       | Variable | Distribution | Parameters  |
 | :----:   | :------: | :---------: | :------------|
-| 1        | $x_1$    | Lognormal   | $\mu_{x_1} = 1,$<br />$\sigma_{x_1} = 0.2$     |
+| 1        | $x_1$    | Lognormal   | $\mu_{x_1} = 1,$<br />$\sigma_{x_1} = 0.2$ |
 | $\vdots$ | $\vdots$ | $\vdots$    | $\vdots$     |
-| M        | $x_M$    | Lognormal   | $\mu_{x_1} = 1,$<br />$\sigma_{x_1} = 0.2$     |
+| M        | $x_M$    | Lognormal   | $\mu_{x_M} = 1,$<br />$\sigma_{x_M} = 0.2$ |
 
 ## Constants
 
