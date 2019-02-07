@@ -41,13 +41,11 @@ The vectorized implementation of the OTL circuit function in MATLAB as well as t
 
  - [uq_otlCircuit.zip](uq_otlCircuit.zip)
 
-The zip file contains:
-
 | Filename | Description |
 | :- | :- | 
 | `uq_otlCircuit.m` | vectorized implementation of the function |
 | `uq_Example_otlCircuit.m` | UQLab definitions for the model and probabilistic inputs |
-| `LICENSE` | license of the function |
+| `LICENSE` | license for the function |
 
 ## References
 
