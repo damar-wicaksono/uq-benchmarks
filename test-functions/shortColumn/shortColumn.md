@@ -16,7 +16,7 @@ $$
 where $\mathbf{x} = \{Y_C, M_C, P_C\}$ is the vector of uncertain input variables 
 and $\mathbf{p} = \{ b, h\}$ is the vector of deterministic input parameters.
 
-The failure event the failure probability are defined as $f(\mathbf{x},\mathbf{p}) \leq 0$ and $P_f = \mathbb{P}[f(\mathbf{x},\mathbf{p}) \leq 0]$, respectively.
+The failure event and the failure probability are defined as $f(\mathbf{x},\mathbf{p}) \leq 0$ and $P_f = \mathbb{P}[f(\mathbf{x},\mathbf{p}) \leq 0]$, respectively.
 
 For reliability-based design optimization (RBDO) problem, the cost to be minimized is the weight of the column is given as:
 
