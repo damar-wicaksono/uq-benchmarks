@@ -1,7 +1,7 @@
 %% EXP-TANH FUNCTION
 %
 % This script contains the model and probabilistic input definitions
-% for the 2-dimensional exp-tanh test function in UQLab.
+% for the 2-dimensional Exp-Tanh test function in UQLab.
 
 %% 1 - INITIALIZE UQLAB
 %

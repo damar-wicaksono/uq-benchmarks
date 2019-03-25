@@ -35,6 +35,16 @@ For computer experiment purposes, the inputs $x_1, x_2$ are modeled as two indep
 
 ## Resources
 
+The vectorized implementation of the Exp-Tanh function in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
+
+The contents of the file are:
+
+| Filename | Description |
+| :- | :- |
+| `uq_expTanh.m` | vectorized implementation of the Exp-Tanh function |
+| `uq_Example_expTanh.m` | definitions for the model and probabilistic inputs in UQLab |
+| `LICENSE` | license for the function (BSD 3-Clause) |
+
 ## References
 
 * N. E. Owen, P. Challenor, P. P. Menon, and S. Bennani, "Comparison of surrogate-based uncertainty quantification methods for computationally expensive simulators," _SIAM/ASA Journal on Uncertainty Quantification_, vol. 5, no. 1, pp. 403--435, 2017. [DOI:10.1137/15M1046812](https://doi.org/10.1137/15M1046812)
