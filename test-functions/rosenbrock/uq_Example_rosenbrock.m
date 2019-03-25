@@ -1,4 +1,4 @@
-%% ROSENBROCK FUNCTION
+%% ROSENBROCK'S FUNCTION
 %
 % This script contains the model and probabilistic input definitions
 % for a 2-dimensional Rosenbrock's test function in UQLab.
