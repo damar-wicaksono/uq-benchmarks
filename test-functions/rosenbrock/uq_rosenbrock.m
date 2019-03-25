@@ -8,6 +8,14 @@ function Y = uq_rosenbrock(X)
 %   input matrix X, where N and M are the number of evaluation points and
 %   the number of dimensions, respectively.
 %
+%   References:
+%
+%   - Forrester, A., A. Sóbester, and A. Keane. (2008).
+%     Engineering Design via Surrogate Modelling: A Practical Guide, 
+%     West Sussex: John Wiley & Sons Ltd., pp. 196-197.
+%   - Picheny, V., T. Wagner, and D. Ginsbourger. (2012).
+%     A benchmark of kriging-based infill criteria for noisy optimization, 
+%     HAL, hal-00658212.
 
 %% Check input
 narginchk(1,1)
