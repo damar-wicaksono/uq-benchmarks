@@ -56,6 +56,16 @@ Using the constants above, three (identical) global minima of the function, $f(\
 
 ## Resources
 
+The vectorized implementation of the Branin function in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
+ 
+The contents of the file are:
+
+| Filename | Description |
+| :- | :- |
+| `uq_branin.m` | vectorized implementation of the Branin function |
+| `uq_Example_branin.m` | definitions for the model and probabilistic inputs in UQLab |
+| `LICENSE` | license for the function (BSD 3-Clause) |
+
 ## References
 
 * A. Forrester, A. Sóbester, and A. Keane, _Engineering Design via Surrogate Modelling: A Practical Guide_, West Sussex: John Wiley & Sons Ltd., 2008, pp. 196-197. [DOI:10.1002/9780470770801](https://doi.org/10.1002/9780470770801)
