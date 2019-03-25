@@ -1,32 +1,26 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% EXP_TANH FUNCTION - EXAMPLE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% EXP-TANH FUNCTION
 %
+% This script contains the model and probabilistic input definitions
+% for the 2-dimensional exp-tanh test function in UQLab.
 
-clearvars
+%% 1 - INITIALIZE UQLAB
+%
 uqlab
 
-
-%% INPUT
-% Definition of the input model
-% Remark: only 2 input variables allowed!
+%% 2 - COMPUTATIONAL MODEL
 %
+ModelOpts.Name = 'expTanhFunctionModel';
+ModelOpts.mFile = 'uq_expTanh';
+myModel = uq_createModel(ModelOpts);
 
-iopts.Marginals(1).Name = 'X_1';
-iopts.Marginals(1).Type = 'Gaussian';
-iopts.Marginals(1).Parameters = [0, 1];
-
-iopts.Marginals(2).Name = 'X_2';
-iopts.Marginals(2).Type = 'Gaussian';
-iopts.Marginals(2).Parameters = [0, 1];
-
-myInput = uq_createInput(iopts);
-
-
-%% MODEL
-% Full model
+%% 3 - PROBABILISTIC INPUT MODEL
 %
+InputOpts.Marginals(1).Name = 'X_1';
+InputOpts.Marginals(1).Type = 'Gaussian';
+InputOpts.Marginals(1).Parameters = [0 1];
 
-mopts.Name = 'exp_tanhFunctionModel';
-mopts.mFile = 'uq_exp_tanh';
-myModel = uq_createModel(mopts);
+InputOpts.Marginals(2).Name = 'X_2';
+InputOpts.Marginals(2).Type = 'Gaussian';
+InputOpts.Marginals(2).Parameters = [0 1];
+
+myInput = uq_createInput(InputOpts);
