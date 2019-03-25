@@ -1,34 +1,34 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% GAYTON HAT FUNCTION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Echard, B., Gayton, N., Lemaire, M., Relun, N., Reliability Engineering
-% and System Safety 111 (2013) 232-240. 
+%% GAYTON HAT FUNCTION
+%
+% This script contains the model and probabilistic input definitions for
+% the 2-dimensional Gayton Hat test function in UQLab.
+% It also includes a crude Monte Carlo simulation to compute
+% the failure probability.
 
-clearvars
+%% 1 - INITIALIZE UQLAB
 uqlab
+rng(100,'twister')
 
-%% INPUT
-% Definition of the input model
-iopts.Marginals(1).Name = 'U_1';         % First variable [-]
-iopts.Marginals(1).Type = 'Gaussian';
-iopts.Marginals(1).Parameters = [0, 1];
+%% 2 - COMPUTATIONAL MODEL
+%
+ModelOpts.Name = 'gaytonHatFunctionModel';
+ModelOpts.mFile = 'uq_gaytonHat';
+myModel = uq_createModel(ModelOpts);
+
+%% 3 - PROBABILISTIC INPUT MODEL
+%
+InputOpts.Marginals(1).Type = 'Gaussian';
+InputOpts.Marginals(1).Parameters = [0 1];
     
-iopts.Marginals(2).Name = 'U_2';         % Second variable [-]
-iopts.Marginals(2).Type = 'Gaussian';
-iopts.Marginals(2).Parameters = [0, 1];
+InputOpts.Marginals(2).Type = 'Gaussian';
+InputOpts.Marginals(2).Parameters = [0 1];
 
-myInput = uq_createInput(iopts);
+myInput = uq_createInput(InputOpts);
 
-
-%% MODEL
-% Full model
-mopts.Name = 'GaytonHat';
-mopts.mFile = 'uq_GaytonHat';
-myModel = uq_createModel(mopts);
-
-%% Quick MCS Reliability
-NSAMPLES = 1e6;
-XX = uq_getSample(NSAMPLES);
+%% 4 - RELIABILITY ANALYSIS
+%
+NSamples = 1e6;
+XX = uq_getSample(NSamples);
 YY = uq_evalModel(XX);
 
-Pf = sum(YY<0)/NSAMPLES;
+Pf = sum(YY<0)/NSamples;
