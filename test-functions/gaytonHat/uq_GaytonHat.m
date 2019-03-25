@@ -1,20 +1,23 @@
 function Y = uq_GaytonHat(X)
+% UQ_GAYTONHAT computes the Gayton Hat test function.
+%
+%   Y = UQ_GAYTONHAT(X) evaluates the Gayton Hat function for N-by-2 input
+%   matrix X, where N is the number of evaluation points; and returns
+%   a column vector of length N.
+%
+%   Reference:
+%
+%   - Echard, B., N. Gayton, M. Lemaire, and N. Relun. (2013).
+%     A combined Importance Sampling and Kriging reliability method
+%     for small failure probabilities with time-demanding numerical models. 
+%     Reliability Engineering and System Safety, vol. 111, pp. 232-240.
 
+%% Check input
+%
+narginchk(1,1)
+assert(size(X,2)==2,'Only 2 input variables are allowed!')
 
-%%  Performance function for the Gayton Hat function
-% This performance function is used in the paper: 
-% Echard, B., Gayton, N., Lemaire, M., Relun, N., Reliability Engineering
-% and System Safety 111 (2013) 232-240. 
-% and contains 2 independent random variables. 
-% X = {U_1,U_2}
+%% Evaluate function
+Y = 0.5*(X(:,1) - 2).^2 - 1.5*(X(:,2) - 5).^3 - 3;
 
-%% Transformation of random variables into real space
-
-% First variable [-]
-U_1 = X(:,1);
-
-% Second variable [-]
-U_2 = X(:,2);
-
-%% Evaluation of the performance function
-Y = 0.5*(U_1 - 2).^2 - 1.5*(U_2 - 5).^3 - 3;
+end
