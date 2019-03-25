@@ -1,34 +1,24 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% BRANIN FUNCTION - EXAMPLE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BRANIN FUNCTION
 %
+% This script contains the model and probabilistic input definitions
+% for a 2-dimensional Branin function in UQLab.
 
-clearvars
+%% 1 - INITIALIZE UQLAB
+%
 uqlab
 
-
-%% INPUT
-% Definition of the input model
-% Remark: only 2 input variables allowed!
+%% 2 - COMPUTATIONAL MODEL
 %
+ModelOpts.Name = 'braninFunctionModel';
+ModelOpts.mFile = 'uq_branin';
+myModel = uq_createModel(ModelOpts);
 
-iopts.Marginals(1).Name = 'X_1';
-iopts.Marginals(1).Type = 'Uniform';
-iopts.Marginals(1).Parameters = [-5, 10];
-
-iopts.Marginals(2).Name = 'X_2';
-iopts.Marginals(2).Type = 'Uniform';
-iopts.Marginals(2).Parameters = [0, 15];
-
-myInput = uq_createInput(iopts);
-
-
-%% MODEL
-% Full model
+%% 3 - PROBABILISTIC INPUT MODEL
 %
+InputOpts.Marginals(1).Type = 'Uniform';
+InputOpts.Marginals(1).Parameters = [-5 10];
 
-mopts.Name = 'braninFunctionModel';
-mopts.mFile = 'uq_branin';
-myModel = uq_createModel(mopts);
+InputOpts.Marginals(2).Type = 'Uniform';
+InputOpts.Marginals(2).Parameters = [0 15];
 
-
+myInput = uq_createInput(InputOpts);

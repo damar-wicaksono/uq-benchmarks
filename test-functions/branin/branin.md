@@ -8,7 +8,7 @@ The Branin function is commonly used as a test function for metamodeling in comp
 
 ## Description
 
-The analytic expression of the Branin function is given as:
+The analytic expression of the Branin function is given as:https://github.com/damar-wicaksono/uq-benchmarks.git
 
 $$
 f(\mathbf{x}) = a (x_2 - b x_1^2 + c x_1 - r)^2 + s (1-t) \cos{x_1} + s; \;\; x_1 \in [-5, 10], \;\; x_2 \in [0, 15],
@@ -29,7 +29,7 @@ Figure 1 and 2 show the surface and contour plots of the Branin function using t
 For computer experiment purposes, the input variables $x_1, x_2$ are modeled as two independent uniform random variables.
 
 | No | Variable | Distribution | Parameters |
-| - | - | - | - | - |
+| :-: | :-: | :-: | :-: | :-: |
 | 1 | $x_1$ | Uniform | $ x_{1,\min} = -5, x_{1,\max} = 10$ |
 | 2 | $x_2$ | Uniform | $ x_{2,\min} = 0, x_{2,\max} = 15$ |
 
@@ -37,14 +37,14 @@ For computer experiment purposes, the input variables $x_1, x_2$ are modeled as 
 
 The default values for the constants are shown below.
 
-| No | Constant | Value |
-| -  | -   | - |
-| 1  | $a$ | $1$  |
-| 2  | $b$ | $\frac{5.1}{(2 \pi)^2}$ |
-| 3  | $c$ | $\frac{5}{\pi}$ |
-| 4  | $r$ | $6$ |
-| 5  | $s$ | $10$ |
-| 6  | $t$ | $\frac{1}{8\pi}$|
+| No  | Constant | Value |
+| :-: | :-:      | :-:   |
+| 1   | $a$      | $1$   |
+| 2   | $b$      | $\frac{5.1}{(2 \pi)^2}$ |
+| 3   | $c$      | $\frac{5}{\pi}$ |
+| 4   | $r$      | $6$  |
+| 5   | $s$      | $10$ |
+| 6   | $t$      | $\frac{1}{8\pi}$ |
 
 ## Analytical values
 
@@ -60,4 +60,3 @@ Using the constants above, three (identical) global minima of the function, $f(\
 
 * A. Forrester, A. Sóbester, and A. Keane, _Engineering Design via Surrogate Modelling: A Practical Guide_, West Sussex: John Wiley & Sons Ltd., 2008, pp. 196-197. [DOI:10.1002/9780470770801](https://doi.org/10.1002/9780470770801)
 * V. Picheny, T. Wagner, and D. Ginsbourger, "A benchmark of kriging-based infill criteria for noisy optimization," _HAL_, hal-00658212, 2012. [URL](https://hal.archives-ouvertes.fr/hal-00658212/document)
-
