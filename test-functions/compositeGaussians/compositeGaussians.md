@@ -4,11 +4,11 @@
 [//]: # "Application fields: metamodeling, reliability"
 [//]: # "Dimension: 2-dimension"
 
-The composite Gaussians function is a two-dimensional test function used in metamodeling and reliability analysis exercises (Bichon et al., 2011).
+The Composite Gaussians function is a two-dimensional test function used in metamodeling and reliability analysis exercises (Bichon et al., 2011).
 
 ## Description
 
-The composite Gaussians function consists of the following components:
+The Composite Gaussians function consists of the following components:
 
 $$
 \begin{align}
@@ -61,15 +61,14 @@ Some reference values for the failure probability are given in the table below.
 
 ## Resources
 
-
-The vectorized implementation of the Branin function in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
+The vectorized implementation of the Composite Gaussians function in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
  
 The contents of the file are:
 
 | Filename | Description |
 | :- | :- |
-| `uq_branin.m` | vectorized implementation of the Branin function |
-| `uq_Example_branin.m` | definitions for the model and probabilistic inputs in UQLab |
+| `uq_compositeGaussians.m` | vectorized implementation of the Composite Gaussians function |
+| `uq_Example_compositeGaussians.m` | definitions for the model and probabilistic inputs in UQLab |
 | `LICENSE` | license for the function (BSD 3-Clause) |
 
 ## References
