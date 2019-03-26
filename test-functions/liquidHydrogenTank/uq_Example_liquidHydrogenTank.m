@@ -16,6 +16,8 @@
 
 %% 1 - INITIALIZE UQLAB
 %
+clearvars
+rng(100,'twister')
 uqlab
 
 %% 2 - COMPUTATIONAL MODEL
@@ -55,3 +57,5 @@ XX = uq_getSample(NSample);
 YY = uq_evalModel(XX);
 
 Pf = sum(YY<0)/NSample;
+
+CV_Pf = sqrt((1-Pf)/(NSample*Pf));
