@@ -61,6 +61,17 @@ Some reference values for the failure probability are given in the table below.
 
 ## Resources
 
+
+The vectorized implementation of the Branin function in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
+ 
+The contents of the file are:
+
+| Filename | Description |
+| :- | :- |
+| `uq_branin.m` | vectorized implementation of the Branin function |
+| `uq_Example_branin.m` | definitions for the model and probabilistic inputs in UQLab |
+| `LICENSE` | license for the function (BSD 3-Clause) |
+
 ## References
 
 * B. J. Bichon, J. M. McFarland, and S. Mahadevan, "Efficient surrogate models for system reliability analysis of systems with multiple failure modes," _Reliability Engineering and System Safety_, vol. 96, pp. 1386--1395, 2011. [DOI:10.1016/j.ress.2011.05.008](https://doi.org/10.1016/j.ress.2011.05.008)
