@@ -1,5 +1,5 @@
 ZIP=zip
-all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_liquidHydrogenTank.zip uq_fourBranch.zip
+all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_liquidHydrogenTank.zip uq_fourBranch.zip uq_otlCircuit.zip
 
 uq_rosenbrock.zip: ./rosenbrock/uq_rosenbrock.m ./rosenbrock/uq_Example_rosenbrock.m LICENSE
 	$(ZIP) -j ./rosenbrock/$@ $^
@@ -13,3 +13,5 @@ uq_liquidHydrogenTank.zip: ./liquidHydrogenTank/uq_liquidHydrogenTank.m ./liquid
 	$(ZIP) -j ./branin/$@ $^
 uq_fourBranch.zip: ./fourBranch/uq_fourBranch.m ./fourBranch/uq_Example_fourBranch.m LICENSE
 	$(ZIP) -j ./fourBranch/$@ $^
+uq_otlCircuit.zip: ./otlCircuit/uq_otlCircuit.m ./otlCircuit/uq_Example_otlCircuit.m LICENSE
+	$(ZIP) -j ./otlCircuit/$@ $^
