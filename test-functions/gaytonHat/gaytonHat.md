@@ -29,6 +29,15 @@ Figure 1 shows the scatter plot of $5\times 10^6$ sample points, with each point
 
 ## Resources
 
+The vectorized implementation of the Gayton Hat function in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
+ 
+The contents of the file are:
+
+| Filename | Description |
+| :- | :- |
+| `uq_gaytonHat.m` | vectorized implementation of the Gayton Hat function |
+| `uq_Example_gaytonHat.m` | definitions for the model and probabilistic inputs in UQLab |
+| `LICENSE` | license for the function (BSD 3-Clause) |
 
 ## References
 

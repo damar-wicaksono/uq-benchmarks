@@ -2,7 +2,7 @@
 %
 % This script contains the model and probabilistic input definitions for
 % the 2-dimensional Gayton Hat test function in UQLab.
-% It also includes a crude Monte Carlo simulation to compute
+% The script also includes a crude Monte Carlo simulation to estimate
 % the failure probability.
 
 %% 1 - INITIALIZE UQLAB
@@ -27,8 +27,8 @@ myInput = uq_createInput(InputOpts);
 
 %% 4 - RELIABILITY ANALYSIS
 %
-NSamples = 1e6;
-XX = uq_getSample(NSamples);
+NSample = 1e6;
+XX = uq_getSample(NSample);
 YY = uq_evalModel(XX);
 
-Pf = sum(YY<0)/NSamples;
+Pf = sum(YY<0)/NSample;
