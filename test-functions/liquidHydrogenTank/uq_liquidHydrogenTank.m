@@ -5,11 +5,11 @@ function Y = uq_liquidHydrogenTank(X)
 %   performance (limit state) function for N-by-5 input matrix X, where N
 %   is the number of evaluation points; and returns a column vector of
 %   length N. The columns of Matrix X are:
-%     X(:,1): t_plate (Thickness of plate [-])
-%     X(:,2): t_h (Thickness of honeycomb [-])
-%     X(:,3): N_x (Load on tank, x-component [-])
-%     X(:,4): N_y (Load on tank, y-component [-])
-%     X(:,5): N_xy (Load on tank, xy-component [-])
+%     X(:,1): t_plate, thickness of plate (-)
+%     X(:,2): t_h, thickness of honeycomb (-)
+%     X(:,3): N_x, load on tank, x-component (-)
+%     X(:,4): N_y, Load on tank, y-component (-)
+%     X(:,5): N_xy, Load on tank, xy-component (-)
 %
 %   Note:
 %
@@ -28,7 +28,7 @@ function Y = uq_liquidHydrogenTank(X)
 narginchk(1,1)
 assert(size(X,2)==5,'Only 5 input variables are allowed!')
 
-%% Store input to local variables
+%% Get input
 %
 t_plate = X(:,1); % Plate thickness [-]
 t_h = X(:,2); % Honeycomb thickness [-]
