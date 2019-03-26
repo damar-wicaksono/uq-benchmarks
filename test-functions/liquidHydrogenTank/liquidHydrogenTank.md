@@ -72,6 +72,16 @@ Some reference values for the failure probability $P_f$ from the literature are 
 
 ## Resources
 
+The vectorized implementation of the limit state function for the liquid hydrogen tank problem in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
+ 
+The contents of the file are:
+
+| Filename | Description |
+| :- | :- |
+| `uq_liquidHydrogenTank.m` | vectorized implementation of the limit state function of the liquid hydrogen tank problem |
+| `uq_Example_liquidHydrogenTank.m` | definitions for the model and probabilistic inputs in UQLab |
+| `LICENSE` | license for the function (BSD 3-Clause) |
+
 ## References
 
-* B. J. Bichon, J. M. McFarland, and S. Mahadevan, "Efficient surrogate models for reliability analysis of systems with multiple failure modes," _Reliability Engineering & System Safety_, vol. 96, no. 10, 2011. [DOI:10.1016/j.ress.2011.05.008](https://doi.org/10.1016/j.ress.2011.05.008)
+* B. J. Bichon, J. M. McFarland, and S. Mahadevan, "Efficient surrogate models for reliability analysis of systems with multiple failure modes," _Reliability Engineering & System Safety_, vol. 96, no. 10, pp. 1386-1395, 2011. [DOI:10.1016/j.ress.2011.05.008](https://doi.org/10.1016/j.ress.2011.05.008)
