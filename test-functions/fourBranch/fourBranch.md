@@ -4,7 +4,7 @@
 [//]: #	"Application fields: reliability"
 [//]: #	"Dimension: 2-dimension"
 
-The 2-dimensional four-branch function is a common benchmark problem in reliability analysis (Schueremans and van Gemert, 2005; Echard et al., 2011; Scöbi et al., 2017). The function describes the failure of a series system with four distinct limit state components.
+The 2-dimensional Four-branch function is a common benchmark problem in reliability analysis (Schueremans and van Gemert, 2005; Echard et al., 2011; Scöbi et al., 2017). The function describes the failure of a series system with four distinct limit state components.
 
 ## Description
 
@@ -42,7 +42,7 @@ The two input variables are modeled as independent Gaussian random variables.
 
 ## Constant parameter
 
-The default value of the constant parameter is $6$.
+The default value of the constant parameter $p$ is $6$.
 
 ## Reference values
 
@@ -56,14 +56,14 @@ Some reference values for the failure probability $P_f$ from the literature are 
 
 ## Resources
 
-The vectorized implementation of the four-branch function in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
+The vectorized implementation of the Four-branch function in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
  
 The contents of the file are:
 
 | Filename | Description |
 | :- | :- |
-| `uq_branin.m` | vectorized implementation of the Branin function |
-| `uq_Example_branin.m` | definitions for the model and probabilistic inputs in UQLab |
+| `uq_fourBranch.m` | vectorized implementation of the Four-branch function |
+| `uq_Example_fourBranch.m` | definitions for the model and probabilistic inputs in UQLab |
 | `LICENSE` | license for the function (BSD 3-Clause) |
 
 ## References

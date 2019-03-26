@@ -1,7 +1,7 @@
 %% FOUR-BRANCH FUNCTION
 %
 % This script contains the model and probabilistic input definitions for
-% the 2-dimensional four-branch test function in UQLab.
+% the 2-dimensional Four-branch test function in UQLab.
 % The script also includes a crude Monte Carlo simulation to estimate
 % the failure probability.
 
@@ -30,6 +30,7 @@ InputOpts.Marginals(2).Parameters = [0 1];
 myInput = uq_createInput(InputOpts);
 
 %% 4 - RELIABILITY ANALYSIS
+%
 NSample = 1e6;
 X = uq_getSample(NSample);
 Y = uq_evalModel(X);

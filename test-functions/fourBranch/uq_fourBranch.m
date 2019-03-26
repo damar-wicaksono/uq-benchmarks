@@ -1,12 +1,12 @@
 function Y = uq_fourBranch(X,P)
-% UQ_FOURBRANCH computes the four-branch limit state function.
+% UQ_FOURBRANCH computes the Four-branch limit state function.
 %
-%   Y = UQ_FOURBRANCH(X) evaluates the four-branch limit state function for
+%   Y = UQ_FOURBRANCH(X) evaluates the Four-branch limit state function for
 %   N-by-2 input matrix X, where N is the number of evaluation points; and
 %   returns a column vector of length N.  The default value of the scalar 
 %   parameter P is 6.
 %
-%   Y = UQ_FOURBRANCH(X,P) evaluates the four-branch limit state function
+%   Y = UQ_FOURBRANCH(X,P) evaluates the Four-branch limit state function
 %   with a user-specified scalar parameter.
 %
 %   Reference:
