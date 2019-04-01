@@ -16,17 +16,17 @@ $$
 
 where $\mathbf{x} = \{U_1, U_2\}$ are standard normal random variables.
 
-The failure event is defined as $f(\mathbf{x}) \leq 0$ and the failure probability $P_f = \mathbb{P}[f(\mathbf{x}) \leq 0]$. Figure 1 shows the scatter plot of $5\times 10^6$ sample points, with each point categorized either as failed ($f(\mathbf{x}) < 0) or safe ($f(\mathbf{x}) > 0$).
+The failure event is defined as $f(\mathbf{x}) \leq 0$ and the failure probability $P_f = \mathbb{P}[f(\mathbf{x}) \leq 0]$. Figure 1 shows the scatter plot of $5\times 10^6$ sample points, with each point categorized either as failed ($f(\mathbf{x}) < 0$) or safe ($f(\mathbf{x}) > 0$).
 
 ![gaytonHatScatter](/home/wdamar/projects/uq-benchmarks/test-functions/gaytonHat/gaytonHatScatter.png)
-**Figure 1**: Scatter plot of $5 \times 10^6$ sample points.
+**Figure 1**: Scatter plot of $5 \times 10^6$ sample points for the Gayton Hat function.
 
 ## Inputs
 
 | No | Variable | Distribution | Parameters |
 | - | - | - | - |
-| 1 | $U_1$ | Gaussian | $\mu_{U_1} = 0, \sigma_{U_1} = 1$ |
-| 2 | $U_2$ | Gaussian | $\mu_{U_2} = 0, \sigma_{U_2} = 1$ |
+| 1 | $U_1$ | Gaussian | $\mu_{U_1} = 0$,<br/>$\sigma_{U_1} = 1$ |
+| 2 | $U_2$ | Gaussian | $\mu_{U_2} = 0$,<br/>$\sigma_{U_2} = 1$ |
 
 ## Reference values
 
@@ -47,7 +47,7 @@ The contents of the file are:
 
 | Filename | Description |
 | :- | :- |
-| `uq_gaytonHat.m` | vectorized implementation of the Gayton Hat function |
+| `uq_gaytonHat.m` | vectorized implementation of the Gayton Hat function in MATLAB |
 | `uq_Example_gaytonHat.m` | definitions for the model and probabilistic inputs in UQLab |
 | `LICENSE` | license for the function (BSD 3-Clause) |
 
