@@ -81,7 +81,7 @@ The contents of the file are:
 
 | Filename | Description |
 | :- | :- |
-| `uq_liquidHydrogenTank.m` | vectorized implementation of the limit state function of the liquid hydrogen tank problem |
+| `uq_liquidHydrogenTank.m` | vectorized implementation of the limit state function of the liquid hydrogen tank problem in MATLAB |
 | `uq_Example_liquidHydrogenTank.m` | definitions for the model and probabilistic inputs in UQLab |
 | `LICENSE` | license for the function (BSD 3-Clause) |
 
