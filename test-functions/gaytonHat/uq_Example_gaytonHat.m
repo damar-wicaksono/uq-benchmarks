@@ -35,4 +35,4 @@ YY = uq_evalModel(XX);
 
 Pf = sum(YY<0)/NSample;
 
-CV_Pf = sqrt((1-Pf)/(NSample*Pf));
+CoV_Pf = sqrt((1-Pf)/(NSample*Pf));

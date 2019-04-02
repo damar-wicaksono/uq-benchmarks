@@ -31,10 +31,10 @@ myInput = uq_createInput(InputOpts);
 
 %% 4 - RELIABILITY ANALYSIS
 %
-NSample = 1e6;
-X = uq_getSample(NSample);
+N = 1e6;
+X = uq_getSample(N);
 Y = uq_evalModel(X);
 
-Pf = sum(Y<0)/NSample;
+Pf = sum(Y<0)/N;
 
-CV_Pf = sqrt((1-Pf)/(NSample*Pf));
+CoV_Pf = sqrt((1-Pf)/(N*Pf));

@@ -57,14 +57,16 @@ Some reference values for the failure probability $P_f$ from the literature are 
 ## Resources
 
 The vectorized implementation of the Four-branch function in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
- 
+
+<a class="attachment" href="uq_fourBranch.zip">uq_fourBranch.zip</a>
+
 The contents of the file are:
 
-| Filename | Description |
-| :- | :- |
-| `uq_fourBranch.m` | vectorized implementation of the Four-branch function |
-| `uq_Example_fourBranch.m` | definitions for the model and probabilistic inputs in UQLab |
-| `LICENSE` | license for the function (BSD 3-Clause) |
+|Filename|Description|
+|:-------|:----------|
+|`uq_fourBranch.m` | vectorized implementation of the Four-branch function |
+|`uq_Example_fourBranch.m` | definitions for the model and probabilistic inputs in UQLab |
+|`LICENSE` | license for the function (BSD 3-Clause) |
 
 ## References
 

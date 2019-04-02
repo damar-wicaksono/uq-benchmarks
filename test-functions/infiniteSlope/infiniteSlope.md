@@ -58,7 +58,7 @@ The inputs for the infinite slope model are modeled as six independent random va
 
 Some reference values for the failure probability $P_f$ are shown in the table below.
 
-|Method|$N$|$\hat{P}_f$|$\text{COV}[\hat{P}_f]$|Source|
+|Method|$N$|$\hat{P}_f$|$\text{CoV}[\hat{P}_f]$|Source|
 |:----:|:-:|:---------:|:---------------------:|:----:|
 | <abbr title="First-order reliability method">FORM</abbr> | $-$ | $7.64 \times 10^{-2}$ | $-$ | Phoon (2008) |
 | <abbr title="Monte Carlo simulation">MCS</abbr>          | $-$ | $5.82 \times 10^{-2}$ | $-$ | Phoon (2008) |

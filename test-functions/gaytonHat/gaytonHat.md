@@ -32,8 +32,8 @@ The failure event is defined as $f(\mathbf{x}) \leq 0$ and the failure probabili
 
 Some reference values for the failure probability $P_f$ from the literature are shown in the table below. Note that the values from Echard et al. (2013) are median values over $100$ replications.
 
-|  Method  |     N    |  $P_f$  | $\text{COV}[\hat{P}_f]$ | Source  |
-| :------: | :------: | :-----: | :---------------------: | :------: |
+|Method|$N$|$\hat{P_f}$|$\text{CoV}[\hat{P}_f]$|Source|
+|:----:|:-:|:---------:|:---------------------:|:----:|
 | <abbr title="Monte Carlo simulation">MCS</abbr> | $5\times 10^7$ | $2.85 \times 10^{-5}$ | $2.64\%$ | Echard et al. (2013) |
 | <abbr title="First-order Reliability Method">FORM</abbr> | $19$ | $4.21 \times 10^{-5}$ | -- | Echard et al. (2013) |
 | <abbr title="Importance Sampling">IS</abbr> | $19 + 10^{4}$ | $2.86 \times 10^{-5}$ | $2.39\%$ | Echard et al. (2013) |

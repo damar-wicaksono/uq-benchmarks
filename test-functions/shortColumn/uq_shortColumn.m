@@ -31,11 +31,10 @@ function Y = uq_shortColumn(X,P)
 %    formulations in DAKOTA/UQ. Structure and Infrastructure Engineering,
 %    vol. 3, no. 3, pp. 199-213, 2007. DOI:10.1080/15732470500254618
 
-
 %% Check inputs
 %
 narginchk(1,2)
-assert(size(X,2)==3,'Only 3 input variables allowed!')
+assert(size(X,2)==3,'Only 3 input variables are allowed!')
 
 %% Assign default parameter values
 %
@@ -59,7 +58,7 @@ Y_Term1 = (4*M_C)./(b.*h.^2*Y_C);
 Y_Term2 = (P_C./(b.*h.*Y_C)).^2;
 
 %%
-% Limit State function
+% Limit state function
 Y = 1 - Y_Term1 - Y_Term2;
 
 end
