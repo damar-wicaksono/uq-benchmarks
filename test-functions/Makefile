@@ -1,5 +1,5 @@
 ZIP=zip
-all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_liquidHydrogenTank.zip uq_fourBranch.zip uq_otlCircuit.zip uq_compositeGaussians.zip uq_shortColumn.zip uq_modifiedRastrigin.zip uq_infiniteSlope.zip uq_borehole.zip
+all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_liquidHydrogenTank.zip uq_fourBranch.zip uq_otlCircuit.zip uq_compositeGaussians.zip uq_shortColumn.zip uq_modifiedRastrigin.zip uq_infiniteSlope.zip uq_borehole.zip uq_highDimensional.zip
 
 uq_rosenbrock.zip: ./rosenbrock/uq_rosenbrock.m ./rosenbrock/uq_Example_rosenbrock.m LICENSE
 	$(ZIP) -j ./rosenbrock/$@ $^
@@ -25,3 +25,5 @@ uq_infiniteSlope.zip: ./infiniteSlope/uq_infiniteSlope.m ./infiniteSlope/uq_Exam
 	$(ZIP) -j ./infiniteSlope/$@ $^
 uq_borehole.zip: ./borehole/uq_borehole.m ./borehole/uq_Example_borehole.m LICENSE
 	$(ZIP) -j ./borehole/$@ $^
+uq_highDimensional.zip: ./highDimensional/uq_highDimensional.m ./highDimensional/uq_Example_highDimensional.m LICENSE
+	$(ZIP) -j ./highDimensional/$@ $^
