@@ -12,7 +12,7 @@ The limit state function of the infinite slope model compares the resisting forc
 The analytical expression of the function is given as:
 
 $$
-f = \frac{R}{S} - 1 = \frac{(\gamma (H-h) + h (\gamma_{\text{sat}}) - \gamma_w) \cos{\theta} \tan{\phi}}{(\gamma (H-h) + h \gamma_{\text{sat}}) \sin{\theta}} - 1
+g = \frac{R}{S} - 1 = \frac{(\gamma (H-h) + h (\gamma_{\text{sat}}) - \gamma_w) \cos{\theta} \tan{\phi}}{(\gamma (H-h) + h \gamma_{\text{sat}}) \sin{\theta}} - 1
 $$
 where:
 
@@ -20,13 +20,13 @@ where:
 * $h$ is the height of the groundwater table above bedrock $[\text{m}]$;
 * $\gamma$ is the moist unit weight of the surface soil $[\text{kN.m}^{-3}]$
 * $\gamma_{\text{sat}}$ is the saturated unit weight of the surface soil $[\text{kN.m}^{-3}]$
-* $\gamma_w$ is the unit weight of water (a deterministic parameter with a value of $9.81 [\text{kN.m}^{^-3}]$)
+* $\gamma_w$ is the unit weight of water (a constant with a value of $9.81 [\text{kN.m}^{^-3}]$)
 * $\phi$ is the effective stress friction angle between the rock and soil $[-]$
 * $\theta$ is the slope inclination $[-]$
 
 The configuration of the model is illustrated in Figure 1.
 
-![infiniteSlope](/infiniteSlope.png)
+![infiniteSlope](infiniteSlope.png)
 **Figure 1**: Illustration for the infinite slope problem, adapted from Phoon (2008).
 
 Notice that the height of the groundwater table bedrock $h$ is limited by the depth of the soil above bedrock $H$. Furthermore, $h$ can only take positive values. Therefore, $h$ is modeled using a uniform random variable such that $h = H U_h$, where $U_h$ is a uniform random variable.
@@ -35,15 +35,15 @@ The moist and saturated soil unit weights are not independent, because they are 
 $$
 \gamma = \gamma_w \frac{G_s+ke}{1+e} \;\;\; \text{and} \;\;\; \gamma_{\text{sat}} = \gamma_w \frac{G_s + e}{1 + e},
 $$
-respectively; and where $k$ is the degree of saturation of moist soil. The parameter $k$ is deterministic with a value of $0.2$.
+respectively. $k$ is the degree of saturation of moist soil with a constant value of $0.2$.
 
-All in all, the input variables are represented by six independent random variables $\mathbf{x} = \{H, U_h, \phi, \theta, G_s, e\}$.
+All in all, the input variables are represented by six variables $\mathbf{x} = \{H, U_h, \phi, \theta, G_s, e\}$.
 
-The failure event (i.e., unstable slopes) is defined as $f(\mathbf{x}) \leq 0$, that is if the resistance $R$ is smaller than the loading $S$. The failure probability, in turn, is defined as $P_f = \mathbb{P}[f(\mathbf{x}) \leq 0]$. 
+The failure event (i.e., unstable slopes) is defined as $g(\mathbf{x}) \leq 0$, that is if the resistance $R$ is smaller than the loading $S$. The failure probability, in turn, is defined as $P_f = \mathbb{P}[g(\mathbf{x}) \leq 0]$.
 
 ## Inputs
 
-The parameters for the six independent random inputs are described in the table below.
+The inputs for the infinite slope model are modeled as six independent random variables described in the table below.
 
 | No  | Variable | Distribution | Parameters | Description |
 | :-: | :------: | :----------: | :--------- | :---------- |
@@ -56,14 +56,27 @@ The parameters for the six independent random inputs are described in the table 
 
 ## Reference values
 
-Some reference values for the failure probability $P_f$ from the literature are shown in the table below.
+Some reference values for the failure probability $P_f$ are shown in the table below.
 
-| Method   | N       |  $\hat{P}_f$   | $\text{COV}[\hat{P}_f]$ | Source  |
-| :----:   | :-----: |  :----------:  | :---------------------: | :-----: |
-| <abbr title="First-order reliability method">FORM</abbr> |   --    | $7.64 \times 10^{-2}$ | -- | Phoon (2008) |
-| <abbr title="Monte Carlo simulation">MCS</abbr>          |   --    | $5.82 \times 10^{-2}$ | -- | Phoon (2008) |
+|Method|$N$|$\hat{P}_f$|$\text{COV}[\hat{P}_f]$|Source|
+|:----:|:-:|:---------:|:---------------------:|:----:|
+| <abbr title="First-order reliability method">FORM</abbr> | $-$ | $7.64 \times 10^{-2}$ | $-$ | Phoon (2008) |
+| <abbr title="Monte Carlo simulation">MCS</abbr>          | $-$ | $5.82 \times 10^{-2}$ | $-$ | Phoon (2008) |
+| MCS          | $10^6$ | $5.78 \times 10^{-2}$ | $0.4\%$ | UQLab v1.2.1 |
 
 ## Resources
+
+The vectorized implementation of the limit state function of the Infinite Slope model in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
+
+<a class="attachment" href="uq_infiniteSlope.zip">uq_infiniteSlope.zip</a>
+
+The contents of the file are:
+
+|Filename|Description|
+|:-------|:----------|
+| `uq_infiniteSlope.m` | vectorized implementation of the limit state function of the Infinite Slope model in MATLAB |
+| `uq_Example_infiniteSlope.m` | definitions for the model and probabilistic inputs in UQLab |
+| `LICENSE` | license for the function (BSD 3-Clause) |
 
 ## References
 
