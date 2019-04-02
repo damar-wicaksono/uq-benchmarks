@@ -1,5 +1,5 @@
 ZIP=zip
-all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_liquidHydrogenTank.zip uq_fourBranch.zip uq_otlCircuit.zip uq_compositeGaussians.zip uq_shortColumn.zip
+all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_liquidHydrogenTank.zip uq_fourBranch.zip uq_otlCircuit.zip uq_compositeGaussians.zip uq_shortColumn.zip uq_modifiedRastrigin.zip
 
 uq_rosenbrock.zip: ./rosenbrock/uq_rosenbrock.m ./rosenbrock/uq_Example_rosenbrock.m LICENSE
 	$(ZIP) -j ./rosenbrock/$@ $^
@@ -19,3 +19,5 @@ uq_compositeGaussians.zip: ./compositeGaussians/uq_compositeGaussians.m ./compos
 	$(ZIP) -j ./compositeGaussians/$@ $^
 uq_shortColumn.zip: ./shortColumn/uq_shortColumn.m ./shortColumn/uq_Example_shortColumn.m LICENSE
 	$(ZIP) -j ./shortColumn/$@ $^
+uq_modifiedRastrigin.zip: ./modifiedRastrigin/uq_modifiedRastrigin.m ./modifiedRastrigin/uq_Example_modifiedRastrigin.m LICENSE
+	$(ZIP) -j ./modifiedRastrigin/$@ $^
