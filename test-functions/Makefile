@@ -1,5 +1,5 @@
 ZIP=zip
-all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_liquidHydrogenTank.zip uq_fourBranch.zip uq_otlCircuit.zip uq_compositeGaussians.zip uq_shortColumn.zip uq_modifiedRastrigin.zip
+all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_liquidHydrogenTank.zip uq_fourBranch.zip uq_otlCircuit.zip uq_compositeGaussians.zip uq_shortColumn.zip uq_modifiedRastrigin.zip uq_infiniteSlope.zip
 
 uq_rosenbrock.zip: ./rosenbrock/uq_rosenbrock.m ./rosenbrock/uq_Example_rosenbrock.m LICENSE
 	$(ZIP) -j ./rosenbrock/$@ $^
@@ -21,3 +21,5 @@ uq_shortColumn.zip: ./shortColumn/uq_shortColumn.m ./shortColumn/uq_Example_shor
 	$(ZIP) -j ./shortColumn/$@ $^
 uq_modifiedRastrigin.zip: ./modifiedRastrigin/uq_modifiedRastrigin.m ./modifiedRastrigin/uq_Example_modifiedRastrigin.m LICENSE
 	$(ZIP) -j ./modifiedRastrigin/$@ $^
+uq_infiniteSlope.zip: ./infiniteSlope/uq_infiniteSlope.m ./infiniteSlope/uq_Example_infiniteSlope.m LICENSE
+	$(ZIP) -j ./infiniteSlope/$@ $^
