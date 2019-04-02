@@ -16,13 +16,13 @@ $$
 
 where $\mathbf{x} = \{x_1, x_2\}$ is the vector of input variables.
 
-The failure event and the failure probability are defined as $g(\mathbf{x}) \leq 0$ and $P_f = \mathbb{P}[g(\mathbf{x}) \leq 0]$, respectively. Figure 1 and 2 show the surface and contour plots of the modified Rastrigin function, respectively. In Figure 2, the limit state function $g(\mathbf{x}) = 0$ is highlighted.
+The failure event and the failure probability are defined as $g(\mathbf{x}) \leq 0$ and $P_f = \mathbb{P}[g(\mathbf{x}) \leq 0]$, respectively. Figure 1 and 2 show the surface and contour plots of the modified Rastrigin function, respectively. In Figure 2, the limit state function at which $g(\mathbf{x}) = 0$ is highlighted.
 
 ![modifiedRastriginSurface](modifiedRastriginSurface.png)
 **Figure 1**: Surface plot of the modifiedRastriginfunction.
 
 ![modifiedRastriginContour](modifiedRastriginContour.png)
-**Figure 2**: Contour plot of the modified Rastrigin function. The limit state function $g(\mathbf{x}=0)$ is highlighted.
+**Figure 2**: Contour plot of the modified Rastrigin function. The limit state function at which $g(\mathbf{x}=0)$ is highlighted.
 
 ## Inputs
 

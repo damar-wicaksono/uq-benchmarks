@@ -80,4 +80,4 @@ The contents of the file are:
 
 ## References
 
-* K.-K Phoon, "Numerical recipes for reliability analysis -- a primer," in _Reliability-based Design in Geotechnical Engineering: Computations and Applications_, K.-K Phoon, Ed. London: CRC Press, 2008,pp. 34--35. [DOI:10.1201/9781482265811](https://doi.org/10.1201/9781482265811)
+* K.-K Phoon, "Numerical recipes for reliability analysis -- a primer," in _Reliability-based Design in Geotechnical Engineering: Computations and Applications_, K.-K Phoon, Ed. London: CRC Press, 2008, pp. 34--35. [DOI:10.1201/9781482265811](https://doi.org/10.1201/9781482265811)
