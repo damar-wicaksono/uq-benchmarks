@@ -14,10 +14,10 @@ Three different failure modes exist for the tank:
 * Isotropic strength failure ($P_{IS}$)
 * Honeycomb buckling failure ($P_{HB}$)
 
-The performance function of the overall system is then defined as:
+The limit state function of the overall system is then defined as:
 
 $$
-P(\mathbf{x}) = \min{(P_{VM}, P_{IS}, P_{HB})},
+g(\mathbf{x}) = \min{(P_{VM}, P_{IS}, P_{HB})},
 $$
 
 where:
@@ -46,7 +46,7 @@ and:
 
 while the input variables of the performance function are $\mathbf{x} = \{t_{\text{plate}}, t_{h}, N_x, N_y, N_{xy}\}$.
 
-The failure event is defined as $f(\mathbf{x}) \leq 0$ and the failure probability $P_f = \mathbb{P}[f(\mathbf{x}) \leq 0]$.
+The failure event is defined as $g(\mathbf{x}) \leq 0$ and the failure probability $P_f = \mathbb{P}[g(\mathbf{x}) \leq 0]$.
 
 ## Inputs
 
@@ -64,16 +64,19 @@ The five input variables are modeled as independent Gaussian random variables.
 
 Some reference values for the failure probability $P_f$ from the literature are shown in the table below. Note that the values from Bichon et al. (2011) are average values over $20$ replications.
 
-|  Method  |     N    |  $P_f$  |  Source  |
-| :------: | :------: | :-----: | :------: |
-| <abbr = "Monte Carlo simulation">MCS</abbr> (<abbr title="latin hypercube sampling">LHS</abbr>)  | $10^4$ | 0.000700 | Bichon et al. (2011) |
-| MCS (LHS)  | $10^5$ | 0.000692 | Bichon et al. (2011) |
-| MCS (LHS)  | $10^6$ | 0.000697 | Bichon et al. (2011) |
+|Method|$N$|$\hat{P_f}$|$\text{CoV}[\hat{P_f}]$|Source|
+|:----:|:-:|:---------:|:---------------------:|:----:|
+| <abbr title= "Monte Carlo simulation">MCS</abbr> (<abbr title="latin hypercube sampling">LHS</abbr>)  | $10^4$ | $7.0 \times 10^{-4}$ | $-$ | Bichon et al. (2011) |
+| MCS (LHS) | $10^5$ | $6.92 \times 10^{-4}$ | $-$ | Bichon et al. (2011) |
+| MCS (LHS) | $10^6$ | $6.97 \times 10^{-4}$ | $-$ | Bichon et al. (2011) |
+| MCS       | $10^6$ | $7.1 \times 10^{-4}$  | $3.75\%$ | UQLab v1.2.1    |
 
 ## Resources
 
 The vectorized implementation of the limit state function for the liquid hydrogen tank problem in MATLAB as well as the script file with the model and probabilistic inputs definitions for the function in UQLAB can be downloaded below:
- 
+
+<a class="attachment" href="uq_liquidHydrogenTank.zip">uq_liquidHydrogenTank.zip</a>
+
 The contents of the file are:
 
 | Filename | Description |

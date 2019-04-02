@@ -1,10 +1,10 @@
 function Y = uq_liquidHydrogenTank(X)
-% UQ_LIQUIDHYDROGENTANK evaluates the liquid hydrogen tank performance function.
+% UQ_LIQUIDHYDROGENTANK evaluates the limit state function of a liquid hydrogen tank model.
 %
-%   Y = UQ_LIQUIDHYDROGENTANK(X) evaluates the liquid hydrogen tank
-%   performance (limit state) function for N-by-5 input matrix X, where N
-%   is the number of evaluation points; and returns a column vector of
-%   length N. The columns of Matrix X are:
+%   Y = UQ_LIQUIDHYDROGENTANK(X) evaluates the limit state function of a 
+%   liquid hydrogen tank model for N-by-5 input matrix X, where N is 
+%   the number of evaluation points; and returns a column vector of
+%   length N. The five input variables are:
 %     X(:,1): t_plate, thickness of plate (-)
 %     X(:,2): t_h, thickness of honeycomb (-)
 %     X(:,3): N_x, load on tank, x-component (-)
@@ -22,6 +22,7 @@ function Y = uq_liquidHydrogenTank(X)
 %     Efficient surrogate models for system reliability analysis of systems
 %     with multiple failure modes. Reliability Engineering and System 
 %     Safety, vol. 96, pp. 1386-1395.
+%
 
 %% Check input
 %
