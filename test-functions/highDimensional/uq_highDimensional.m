@@ -2,7 +2,7 @@ function Y = uq_highDimensional(X,P)
 % UQ_HIGHDIMENSIONAL computes the High-dimensional limit state function.
 %
 %   Y = UQ_HIGHDIMENSIONAL(X) evaluates the high-dimensinal limit state
-%   function for N-by-M input matrix X, where N and are the numbers of 
+%   function for N-by-M input matrix X, where N and M are the numbers of 
 %   evaluation points and input dimensions, respectively; and returns 
 %   a column vector of length N. The default scalar parameter value is 0.2.
 %

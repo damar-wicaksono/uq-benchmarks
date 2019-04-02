@@ -14,6 +14,8 @@ uqlab
 %
 ModelOpts.Name = 'CompositeGaussianFunctionModel';
 ModelOpts.mFile = 'uq_CompositeGaussians';
+ModelOpts.isVectorized = true;
+
 myModel = uq_createModel(ModelOpts);
 
 %% 3 - PROBABILISTIC INPUT MODEL
@@ -34,9 +36,9 @@ NSamples = [1e4 1e5 1e6 1e7];
 Pf = zeros(length(NSamples),1);
 Cov_Pf = zeros(length(NSamples),1);
 
-for i=1:length(NSamples)
+for i = 1:length(NSamples)
     XX = uq_getSample(NSamples(i));
     YY = uq_evalModel(XX);
     Pf(i) = sum(YY<0)/NSamples(i);
-    Cov_Pf(i) = sqrt((1-Pf(i))/NSamples(i)/Pf(i));
+    CoV_Pf(i) = sqrt((1-Pf(i))/NSamples(i)/Pf(i));
 end

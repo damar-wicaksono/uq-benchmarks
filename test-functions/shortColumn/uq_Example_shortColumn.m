@@ -12,13 +12,15 @@ uqlab
 %
 ModelOpts.Name = 'shortColumnFunctionModel';
 ModelOpts.mFile = 'uq_shortColumn';
+ModelOpts.isVectorized = true;
+
 myModel = uq_createModel(ModelOpts);
 
 %% 3 - PROBABILISTIC INPUT MODEL
 %
-InputOpts.Marginals(1).Name = 'Y'; % Yield stress
+InputOpts.Marginals(1).Name = 'Y'; % Yield stress (MPa)
 InputOpts.Marginals(1).Type = 'Lognormal';
-InputOpts.Marginals(1).Moments = [5 0.5]; % (MPa)
+InputOpts.Marginals(1).Moments = [5 0.5];
 
 InputOpts.Marginals(2).Name = 'M'; % Bending moment
 InputOpts.Marginals(2).Type = 'Gaussian';

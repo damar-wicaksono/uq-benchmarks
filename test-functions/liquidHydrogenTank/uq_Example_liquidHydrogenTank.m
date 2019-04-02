@@ -24,6 +24,8 @@ uqlab
 %
 ModelOpts.Name = 'liquidHydrogenTankModel';
 ModelOpts.mFile = 'uq_liquidHydrogenTank';
+ModelOpts.isVectorized = true;
+
 myModel = uq_createModel(ModelOpts);
 
 %% 3 - PROBABILISTIC INPUT MODEL
@@ -53,9 +55,9 @@ myInput = uq_createInput(InputOpts);
 %% 4 - RELIABILITY ANALYSIS
 %
 N = 1e6;
-XX = uq_getSample(N);
-YY = uq_evalModel(XX);
+X = uq_getSample(N);
+Y = uq_evalModel(X);
 
-Pf = sum(YY<0)/N;
+Pf = sum(Y<0)/N;
 
 CoV_Pf = sqrt((1-Pf)/(N*Pf));

@@ -21,6 +21,8 @@ uqlab
 %
 ModelOpts.Name = 'boreholeModel';
 ModelOpts.mFile = 'uq_borehole';
+ModelOpts.isVectorized = true;
+
 myModel = uq_createModel(ModelOpts);
 
 %% 3 - PROBABILISTIC INPUT MODEL

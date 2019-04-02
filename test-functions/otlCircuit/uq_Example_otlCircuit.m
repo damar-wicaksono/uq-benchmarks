@@ -5,12 +5,15 @@
 
 %% 1 - INITIALIZE UQLAB
 %
+clearvars
 uqlab
 
 %% 2 - COMPUTATIONAL MODEL
 %
 ModelOpts.Name = 'OTLCircuitFunctionModel';
 ModelOpts.mFile = 'uq_otlCircuit';
+ModelOpts.isVectorized = true;
+
 myModel = uq_createModel(ModelOpts);
 
 %% 3 - PROBABILISTIC INPUT MODEL
@@ -33,7 +36,7 @@ InputOpts.Marginals(4).Parameters = [1.2 2.5];
 
 InputOpts.Marginals(5).Name = 'Rc2'; % Resistance c2 (kOhm)
 InputOpts.Marginals(5).Type = 'Uniform';
-iopts.Marginals(5).Parameters = [0.25 1.2];
+InputOpts.Marginals(5).Parameters = [0.25 1.2];
 
 InputOpts.Marginals(6).Name = 'beta'; % Current gain (A)
 InputOpts.Marginals(6).Type = 'Uniform';

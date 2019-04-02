@@ -15,6 +15,8 @@ uqlab
 %
 ModelOpts.Name = 'highDimensionalFunctionModel';
 ModelOpts.mFile = 'uq_highDimensional';
+ModelOpts.isVectorized = true;
+
 myModel = uq_createModel(ModelOpts);
 
 %% 3 - PROBABILISTIC INPUT MODELS

@@ -15,6 +15,8 @@ uqlab
 %
 ModelOpts.Name = 'modifiedRastriginFunctionModel';
 ModelOpts.mFile = 'uq_modifiedRastrigin';
+ModelOpts.isVectorized = true;
+
 myModel = uq_createModel(ModelOpts);
 
 %% 3 - PROBABILISTIC INPUT MODEL
