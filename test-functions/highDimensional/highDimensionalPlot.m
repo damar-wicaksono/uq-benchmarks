@@ -1,6 +1,6 @@
 %% High-Dimensional Limit State Function Plots
 
-%% Input mesh
+%% Create input mesh
 [X, Y] = meshgrid(-10:1:10, -10:1:10);
 
 %% Evaluate the function
