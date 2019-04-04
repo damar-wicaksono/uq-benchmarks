@@ -1,5 +1,5 @@
 ZIP=zip
-all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_fourBranch.zip uq_otlCircuit.zip uq_compositeGaussians.zip uq_shortColumn.zip uq_modifiedRastrigin.zip uq_infiniteSlope.zip uq_borehole.zip uq_highDimensional.zip uq_liquidHydrogenTank.zip uq_ishigami.zip
+all: uq_rosenbrock.zip uq_expTanh.zip uq_gaytonHat.zip uq_branin.zip uq_fourBranch.zip uq_otlCircuit.zip uq_compositeGaussians.zip uq_shortColumn.zip uq_modifiedRastrigin.zip uq_infiniteSlope.zip uq_borehole.zip uq_highDimensional.zip uq_liquidHydrogenTank.zip uq_ishigami.zip uq_morris.zip
 
 uq_rosenbrock.zip: ./rosenbrock/uq_rosenbrock.m ./rosenbrock/uq_Example_rosenbrock.m LICENSE
 	$(ZIP) -j ./rosenbrock/$@ $^
@@ -29,3 +29,5 @@ uq_liquidHydrogenTank.zip: ./liquidHydrogenTank/uq_liquidHydrogenTank.m ./liquid
 	$(ZIP) -j ./liquidHydrogenTank/$@ $^
 uq_ishigami.zip: ./ishigami/uq_ishigami.m ./ishigami/uq_Example_ishigami.m LICENSE
 	$(ZIP) -j ./ishigami/$@ $^
+uq_morris.zip: ./morris/uq_morris.m ./morris/uq_Example_morris.m ./morris/uq_Example_morrisSudret.m ./morris/uq_Example_morrisLamboni.m LICENSE
+	$(ZIP) -j ./morris/$@ $^

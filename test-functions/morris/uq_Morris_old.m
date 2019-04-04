@@ -10,12 +10,15 @@ function Y = uq_Morris(X,P)
 
 %% Definition of constants
 [n,~] = size(X);
-
+morris = 0;
 % Retrieve which model we are using
 if exist('P')
     if isfield(P,'Model')
         if strcmp('Lamboni',P.Model)
             sudret = 0;
+        elseif strcmp('Morris',P.Model)
+            sudret = 0;
+            morris = 1;
         else
             sudret = 1;
         end
@@ -38,6 +41,8 @@ ind1 = [1,2,4,6,8,9,10,11,12,13,14,15,16,17,18,19,20];
 ind2 = [3,5,7]; 
 W(:,ind1) = 2*(X(:,ind1) - 1/2);
 if sudret == 1
+    W(:,ind2) = 2*(1.1*X(:,ind2)./(X(:,ind2)+0.1) - 1/2);   % Sudret Version
+elseif morris == 1
     W(:,ind2) = 2*(1.1*X(:,ind2)./(X(:,ind2)+0.1) - 1/2);   % Sudret Version
 else
     W(:,ind2) = 2*(1.1*X(:,ind2)./(X(:,ind2)+1) - 1/2);     % Lamboni Version
