@@ -17,6 +17,7 @@ function Vm = uq_otlCircuit(X)
 %     Experiments: An Empirical Comparison of Kriging with MARS and
 %     Projection Pursuit Regression. Quality Engineering, vol. 19,
 %     pp. 327-338. DOI:10.1080/08982110701580930
+%
 
 %% Check input
 %
