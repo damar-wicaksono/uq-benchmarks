@@ -1,11 +1,10 @@
-%% Specify the high-dimensional example function (M = 2)
-highDimensional = @(X,Y,C) (2 + 3 * C * sqrt(2)) - X - Y;
+%% High-Dimensional Limit State Function Plots
 
-% Input mesh
+%% Create input mesh
 [X, Y] = meshgrid(-10:1:10, -10:1:10);
 
 %% Evaluate the function
-Z = highDimensional(X,Y,0.2);
+Z = arrayfun(@(x,y) uq_highDimensional([x y]), X, Y);
 
 %% Create surface plot
 x0 = 10;

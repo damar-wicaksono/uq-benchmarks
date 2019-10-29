@@ -1,18 +1,21 @@
 %% COMPOSITE GAUSSIANS FUNCTION
 %
 % This script contains the model and probabilistic input definitions of the
-% composite Gaussians test function for UQLab. It is followed by a simple
+% composite Gaussians test function for UQLab. It is followed by a crude
 % Monte Carlo simulation to estimate the failure probability.
 
 %% 1 - INITIALIZE UQLAB
 %
-uqlab
+clearvars
 rng(100,'twister')
+uqlab
 
 %% 2 - COMPUTATIONAL MODEL
 %
 ModelOpts.Name = 'CompositeGaussianFunctionModel';
 ModelOpts.mFile = 'uq_CompositeGaussians';
+ModelOpts.isVectorized = true;
+
 myModel = uq_createModel(ModelOpts);
 
 %% 3 - PROBABILISTIC INPUT MODEL
@@ -27,15 +30,15 @@ InputOpts.Marginals(2).Parameters = [5 1];
 
 myInput = uq_createInput(InputOpts);
 
-%% 4 - RELIABILITY ANALYSIS: MONTE CARLO SIMULATION
+%% 4 - RELIABILITY ANALYSIS
 %
 NSamples = [1e4 1e5 1e6 1e7];
 Pf = zeros(length(NSamples),1);
 Cov_Pf = zeros(length(NSamples),1);
 
-for i=1:length(NSamples)
+for i = 1:length(NSamples)
     XX = uq_getSample(NSamples(i));
     YY = uq_evalModel(XX);
     Pf(i) = sum(YY<0)/NSamples(i);
-    Cov_Pf(i) = sqrt((1-Pf(i))/NSamples(i)/Pf(i));
+    CoV_Pf(i) = sqrt((1-Pf(i))/NSamples(i)/Pf(i));
 end

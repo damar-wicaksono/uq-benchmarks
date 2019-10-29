@@ -27,6 +27,6 @@ Y = uq_evalModel(myModel,X);
 uq_figure('Position', [50 50 500 400]);
 uq_histogram(Y);
 xlabel('Y')
-ylabel('Number of samples')
+ylabel('Frequency')
 
 saveas(gcf, 'ishigamiHistogram.png')

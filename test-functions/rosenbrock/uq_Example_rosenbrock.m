@@ -11,6 +11,8 @@ uqlab
 %
 ModelOpts.Name = 'rosenbrockFunctionModel';
 ModelOpts.mFile = 'uq_rosenbrock';
+ModelOpts.isVectorized = true;
+
 myModel = uq_createModel(ModelOpts);
 
 %% 3 - PROBABILISTIC INPUT MODEL

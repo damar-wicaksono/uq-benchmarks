@@ -1,7 +1,7 @@
-%% GAYTON HAT FUNCTION
+%% MODIFIED RASTRIGIN FUNCTION
 %
 % This script contains the model and probabilistic input definitions for
-% the 2-dimensional Gayton Hat test function in UQLab.
+% the 2-dimensional modified Rastrigin test function in UQLab.
 % The script also includes a crude Monte Carlo simulation to estimate
 % the failure probability.
 
@@ -13,8 +13,8 @@ uqlab
 
 %% 2 - COMPUTATIONAL MODEL
 %
-ModelOpts.Name = 'gaytonHatFunctionModel';
-ModelOpts.mFile = 'uq_gaytonHat';
+ModelOpts.Name = 'modifiedRastriginFunctionModel';
+ModelOpts.mFile = 'uq_modifiedRastrigin';
 ModelOpts.isVectorized = true;
 
 myModel = uq_createModel(ModelOpts);
@@ -24,7 +24,7 @@ myModel = uq_createModel(ModelOpts);
 InputOpts.Marginals(1).Name = 'X1';
 InputOpts.Marginals(1).Type = 'Gaussian';
 InputOpts.Marginals(1).Parameters = [0 1];
-    
+
 InputOpts.Marginals(2).Name = 'X2';
 InputOpts.Marginals(2).Type = 'Gaussian';
 InputOpts.Marginals(2).Parameters = [0 1];

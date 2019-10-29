@@ -9,7 +9,7 @@ function Y = uq_branin(X,P)
 %   Y = UQ_BRANIN(X) evaluates the Branin function for N-by-2 input matrix
 %   X, where N is the number of evaluation points; and returns
 %   a column vector of length N. The default scalar parameters of the
-%   function is:
+%   function are:
 %     a: 1
 %     b: 5.1/(2*pi)^2
 %     c: 5/pi
@@ -22,7 +22,7 @@ function Y = uq_branin(X,P)
 %
 %   References:
 %
-%   - Forrester, A., A. Sóbester, and A. Keane. (2008).
+%   - Forrester, A., A. SÃ³bester, and A. Keane. (2008).
 %     Engineering Design via Surrogate Modelling: A Practical Guide, 
 %     West Sussex: John Wiley & Sons Ltd., pp. 196-197.
 %   - Picheny, V., T. Wagner, and D. Ginsbourger. (2012).
