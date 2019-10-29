@@ -5,7 +5,7 @@
 [//]: # "Dimension: 6-dimension"
 
 The six-dimensional OTL circuit function computes the mid-point voltage ($V_m$) of an output transformerless (OTL) push-pull circuit.
-It has been used as a test function in metamodeling (Ben Ari, 2007) and sensitivity analysis for screening (Moon, 2010) exercises.
+It has been used as a test function in metamodeling (Ben-Ari and Steinberg, 2007) and sensitivity analysis for screening (Moon, 2010) exercises.
 
 ## Description
 
@@ -21,7 +21,7 @@ $$
 V_{b1} = \frac{12 R_{b2}}{R_{b1} + R_{b2}}.
 $$
 
-and $\mathbf{x} = \{R_{b1}, R_{b2}, R_{f}, R_{c1}, R_{c2}, \beta\}​$ is the vector of input variables described in the table below.
+and $\mathbf{x} = \{R_{b1}, R_{b2}, R_{f}, R_{c1}, R_{c2}, \beta\}$ is the vector of input variables described in the table below.
 
 ## Inputs
 
