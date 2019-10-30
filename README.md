@@ -1,46 +1,59 @@
 # uq-benchmarks
 
+
+## Test Functions 
+
 This project contains all the available UQ benchmark functions in MATLAB
 along with their respective description in markdown format.
 
 The currently available benchmark test functions are:
 
-- Rosenbrock's Function (_published_)
-- Exp-Tanh Function (_published_)
-- Gayton Hat Function (_published_)
-- Branin Function (_published_)
-- Four-Branch Function (_published_)
-- OTL Circuit Function (_published_)
-- Composite Gaussians (_published_)
-- Short Column function (_published_)
-- Modified Rastrigin Function (_published_)
-- Infinite Slope (_published_)
-- Borehole Function (_published_)
-- High-dimensional Example Function (_published_)
-- Liquid Hydrogen Tank Problem (_published_)
-- Ishigami function (_published_)
-- Morris function
+| Function Name  | Folder Name  | # of Input Variables   | Application Fields   | Published in UQWorld   |
+|-----------------------------------|---|---|---|---|
+| Rosenbrock's Function             | `rosenbrock`         | m  | optimization  | yes |
+| Exp-Tanh Function                 | `expTanh`            | 2  | metamodeling  | yes |
+| Gayton Hat Function               | `gaytonHat`          | 2  | reliability   | yes |
+| Four-Branch Function              | `fourBranch`         | 2  | reliability   | yes |
+| OTL Circuit Function              | `otlCircuit`         | 6  | metamodeling, | yes |
+|                                   |                      |    | sensitivity   |     |
+| Composite Gaussians               | `compositeGaussians` | 2  | reliability,  | yes |
+|                                   |                      |    | metamodeling  |     |
+| Short Column Function             | `shortColumn`        | 3  | rbdo          | yes |
+| Modified Rastrigin Function       | `modifiedRastrigin`  | 2  | reliability   | yes |
+| Infinite Slope                    | `infiniteSlope`      | 6  | reliability   | yes |
+| Borehole Function                 | `borehole`           | 8  | sensitivity,  | yes |
+|                                   |                      |    | metamodeling  |     |
+| High-Dimensional Example Function | `highDimensional`    | m  | reliability   | yes |
+| Liquid Hydrogen Tank Problem      | `liquidHydrogenTank` | 5  | reliability   | yes |
+| Ishigami Function                 | `ishigami`           | 3  | sensitivity   | yes |
+| Morris Function                   | `morris`             | 20 | sensitivity   |     |
+| Ten Bar Truss                     | `tenBarTruss`        |    |               |     |
+| Branin Function                   | `branin`             | 2  | metamodeling, | yes |
+|                                   |                      |    | optimization  |     |
 
 The references of these functions are stored in a BibTeX file in the `references/` folder.
 
-## Structure of Descriptions
+### Structure of Descriptions
 
 Each benchmark test functions must be accompanied by a description with the following structure:
 
-- Description, preferrably including plots
+- Metadata (as Markdown comment): benchmark type, application fields, dimension
+- Description, preferrably including plots (e.g., input/output surface, or illustration of the problem).
+  The scripts to generate the plots or the illustration in vector graphics format are stored in the respective folder.
 - Inputs
 - Reference values (if any) based on the literature or analytical values
 - Resources (the downloadable package)
+- References the source of the benchmark test functions
 
-## Downloadable package content
+### Downloadable package content
 
 A benchmark test function is packaged into a zip file with the following content:
 
 - A vectorized implementation of the test function
-- definitions for the model and probabilistic inputs (if any) in UQLab
-- An BSD 3-clause license
+- Definitions for the model and probabilistic inputs (if any) in UQLab
+- A BSD 3-clause license
 
-## Creating a zip file
+### Creating a zip file
 
 In UQWorld, the relevant files are provided for community members.
 A Makefile is available to compile a set of required files as a zip.
@@ -60,3 +73,9 @@ ZIP=zip
 uq_rosenbrock.zip: ./rosenbrock/uq_rosenbrock.m ./rosenbrock/uq_Example_rosenbrock.m LICENSE
 	$(ZIP) -j ./rosenbrock/$@ $^
 ```
+
+## Data sets
+
+In addition to test functions, data sets were planned to be released in UQWorld.
+A draft of the description has been made in `data-sets/wbsar`.
+However, because the licensing of the data itself has not been settled, they cannot be released publicly.
