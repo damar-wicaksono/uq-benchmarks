@@ -10,26 +10,26 @@ The currently available benchmark test functions are:
 
 | Function Name  | Folder Name  | # of Input Variables   | Application Fields   | Published in UQWorld   |
 |-----------------------------------|---|---|---|---|
-| Rosenbrock's Function             | `rosenbrock`         | m  | optimization  | yes |
-| Exp-Tanh Function                 | `expTanh`            | 2  | metamodeling  | yes |
-| Gayton Hat Function               | `gaytonHat`          | 2  | reliability   | yes |
-| Four-Branch Function              | `fourBranch`         | 2  | reliability   | yes |
-| OTL Circuit Function              | `otlCircuit`         | 6  | metamodeling, | yes |
-|                                   |                      |    | sensitivity   |     |
-| Composite Gaussians               | `compositeGaussians` | 2  | reliability,  | yes |
-|                                   |                      |    | metamodeling  |     |
-| Short Column Function             | `shortColumn`        | 3  | rbdo          | yes |
-| Modified Rastrigin Function       | `modifiedRastrigin`  | 2  | reliability   | yes |
-| Infinite Slope                    | `infiniteSlope`      | 6  | reliability   | yes |
-| Borehole Function                 | `borehole`           | 8  | sensitivity,  | yes |
-|                                   |                      |    | metamodeling  |     |
-| High-Dimensional Example Function | `highDimensional`    | m  | reliability   | yes |
-| Liquid Hydrogen Tank Problem      | `liquidHydrogenTank` | 5  | reliability   | yes |
-| Ishigami Function                 | `ishigami`           | 3  | sensitivity   | yes |
-| Morris Function                   | `morris`             | 20 | sensitivity   |     |
-| Ten Bar Truss                     | `tenBarTruss`        |    |               |     |
-| Branin Function                   | `branin`             | 2  | metamodeling, | yes |
-|                                   |                      |    | optimization  |     |
+| Rosenbrock's Function             | `rosenbrock`         | m  | optimization  | [yes](https://uqworld.org/t/rosenbrocks-function)              |
+| Exp-Tanh Function                 | `expTanh`            | 2  | metamodeling  | [yes](https://uqworld.org/t/exp-tanh-function)                 |
+| Gayton Hat Function               | `gaytonHat`          | 2  | reliability   | [yes](https://uqworld.org/t/gayton-hat-function)               |
+| Four-Branch Function              | `fourBranch`         | 2  | reliability   | [yes](https://uqworld.org/t/four-branch-function)              |
+| OTL Circuit Function              | `otlCircuit`         | 6  | metamodeling, | [yes](https://uqworld.org/t/otl-circuit-function)              |
+|                                   |                      |    | sensitivity   |                                                                |
+| Composite Gaussians               | `compositeGaussians` | 2  | reliability,  | [yes](https://uqworld.org/t/composite-gaussians)               |
+|                                   |                      |    | metamodeling  |                                                                |
+| Short Column Function             | `shortColumn`        | 3  | rbdo          | [yes](https://uqworld.org/t/short-column-function)             |
+| Modified Rastrigin Function       | `modifiedRastrigin`  | 2  | reliability   | [yes](https://uqworld.org/t/modified-rastrigin-function)       |
+| Infinite Slope                    | `infiniteSlope`      | 6  | reliability   | [yes](https://uqworld.org/t/infinite-slope-model)              |
+| Borehole Function                 | `borehole`           | 8  | sensitivity,  | [yes](https://uqworld.org/t/borehole-function)                 |
+|                                   |                      |    | metamodeling  |                                                                |
+| High-Dimensional Example Function | `highDimensional`    | m  | reliability   | [yes](https://uqworld.org/t/high-dimensional-example-function) |
+| Liquid Hydrogen Tank Problem      | `liquidHydrogenTank` | 5  | reliability   | [yes](https://uqworld.org/t/liquid-hydrogen-tank-problem)      |
+| Ishigami Function                 | `ishigami`           | 3  | sensitivity   | [yes](https://uqworld.org/t/ishigami-function)                 |
+| Morris Function                   | `morris`             | 20 | sensitivity   |                                                                |
+| Ten Bar Truss                     | `tenBarTruss`        |    |               |                                                                |
+| Branin Function                   | `branin`             | 2  | metamodeling, | [yes](https://uqworld.org/t/branin-function)                   |
+|                                   |                      |    | optimization  |                                                                |
 
 The references of these functions are stored in a BibTeX file in the `references/` folder.
 
