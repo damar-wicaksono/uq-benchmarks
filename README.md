@@ -49,7 +49,7 @@ Each benchmark test functions must be accompanied by a description with the foll
 
 A benchmark test function is packaged into a zip file with the following content:
 
-- A vectorized implementation of the test function
+- A vectorized implementation of the test function in MATLAB
 - Definitions for the model and probabilistic inputs (if any) in UQLab
 - A BSD 3-clause license
 
