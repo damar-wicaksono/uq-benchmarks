@@ -8,8 +8,8 @@ along with their respective description in markdown format.
 
 The currently available benchmark test functions are:
 
-| Function Name  | Folder Name  | # of Input Variables   | Application Fields   | Published in UQWorld   |
-|-----------------------------------|---|---|---|---|
+| Function Name                     | Folder Name  | # of Input Variables   | Application Fields   | Published in UQWorld   |
+|-----------------------------------|:------------:|:----------------------:|:--------------------:|:----------------------:|
 | Rosenbrock's Function             | `rosenbrock`         | m  | optimization  | [yes](https://uqworld.org/t/rosenbrocks-function)              |
 | Exp-Tanh Function                 | `expTanh`            | 2  | metamodeling  | [yes](https://uqworld.org/t/exp-tanh-function)                 |
 | Gayton Hat Function               | `gaytonHat`          | 2  | reliability   | [yes](https://uqworld.org/t/gayton-hat-function)               |
